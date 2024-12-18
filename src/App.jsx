@@ -10,6 +10,8 @@ import ReactGA from 'react-ga'; // Import react-ga
 import CookieConsentBanner from "./components/Cookie/CookieConsentBanner"
 import Solution from './components/Home/Menu/Solution';
 import Service from './components/Home/Menu/Service';
+import Experties from './components/Home/Menu/Experties';
+import Industrie from './components/Home/Menu/Industrie'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -60,7 +62,7 @@ function App() {
         </div>
         <Footer />
         <CookieConsentBanner /> */}
-        <Service/>
+        <Industrie/>
       </>
     </HelmetProvider>
   );
