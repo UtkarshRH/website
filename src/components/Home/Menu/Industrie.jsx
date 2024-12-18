@@ -1,44 +1,61 @@
 import React from "react";
 import manuf from "../../../assets/img/manuf.png";
 import remote from "../../../assets/img/remote.png";
+import energy from "../../../assets/img/energy.png";
+import transport from "../../../assets/img/transport.png"
 
 const industriesData = [
     {
         id: 1,
         icon: manuf,
         title: "Software-Driven Manufacturing",
-        description: `Revolutionizing production processes with smart factories: <br/> 
-                  Advanced ERP Systems: Streamline workflows and improve operational efficiency. <br/> 
-                  Real-Time Supply Chain Management: Enhance visibility and responsiveness. <br/> 
-                  Data-Driven Insights: Optimize production and reduce downtime.`,
+        description: `
+            Revolutionizing production processes with smart factories: 
+            <ul style="list-style-type: disc; padding-left: 20px;">
+                <li>Advanced ERP Systems: Streamline workflows and improve operational efficiency.</li>
+                <li>Real-Time Supply Chain Management: Enhance visibility and responsiveness.</li>
+                <li>Data-Driven Insights: Optimize production and reduce downtime.</li>
+            </ul>
+        `,
     },
     {
         id: 2,
         icon: remote,
         title: "Remote Operations",
-        description:
-            `Redefining how businesses operate from anywhere: <br/> 
-             Remote Monitoring: Seamlessly control and track critical assets. <br/> 
-             Real-Time Data Accessibility: Enable informed, data-driven decisions. <br/> 
-             IoT Connectivity: Ensure uninterrupted operations and connectivity.`,
+        description: `
+            Redefining how businesses operate from anywhere: 
+            <ul style="list-style-type: disc; padding-left: 20px;">
+                <li>Remote Monitoring: Seamlessly control and track critical assets.</li>
+                <li>Real-Time Data Accessibility: Enable informed, data-driven decisions.</li>
+                <li>IoT Connectivity: Ensure uninterrupted operations and connectivity.</li>
+            </ul>
+        `,
     },
     {
         id: 3,
-        icon: manuf,
+        icon: energy,
         title: "Energy",
-        description:`Driving innovation for a sustainable future: <br/> 
-                     Smart Grid Management: Optimize energy distribution and usage. <br/> 
-                     Renewable Energy Integration: Enhance efficiency and reduce dependency on non-renewables. <br/> 
-                     Advanced Analytics: Minimize energy waste and maximize output. <br/> `,
+        description: `
+            Driving innovation for a sustainable future: 
+            <ul style="list-style-type: disc; padding-left: 20px;">
+                <li>Smart Grid Management: Optimize energy distribution and usage.</li>
+                <li>Renewable Energy Integration: Enhance efficiency and reduce dependency on non-renewables.</li>
+                <li>Advanced Analytics: Minimize energy waste and maximize output.</li>
+            </ul>
+        `,
     },
     {
         id: 4,
-        icon: remote,
+        icon: transport,
         title: "Transportation",
-        description:`Advancing logistics and mobility solutions: <br/> 
-                     Real-Time Fleet Tracking: Gain complete visibility of logistics operations. <br/> 
-                     Optimized Routing and Scheduling: Reduce costs and improve delivery efficiency. <br/> 
-                     Safety Monitoring: Enhance the reliability of transportation networks.`,
+        description: `
+            Advancing logistics and mobility solutions: 
+            <ul style="list-style-type: disc; padding-left: 20px;">
+                <li>Real-Time Fleet Tracking: Gain complete visibility of logistics operations.</li>
+                <li>Optimized Routing and Scheduling: Reduce costs and improve delivery efficiency.</li>
+                <li>Safety Monitoring: Enhance the reliability of transportation networks.</li>
+            </ul>
+        `,
     },
 ];
 
@@ -62,33 +79,34 @@ const Industrie = () => {
 
             {/* Cards Section */}
             <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mt-12 px-12 md:px-48">
-                {industriesData.map((industry,index) => (
+                {industriesData.map((industry, index) => (
                     <div
                         key={industry.id}
-                        className={`flex bg-white shadow-lg hover:shadow-xl transition duration-300 p-6  ${
-                        index % 2 === 0 ? "rounded-r-full" : "rounded-l-full"
-                        }`}
+                        className={`flex shadow-lg hover:shadow-2xl transition duration-300 p-6 ${index % 2 === 0 ? "rounded-r-full flex-row bg-[#FFF5FF]" : "rounded-l-full flex-row-reverse bg-[#F5F8FF]"
+                            }`}
                     >
                         {/* Left Section: Content */}
                         <div className="w-2/3 pl-10 flex flex-col justify-center">
                             <h3 className="text-2xl font-bold text-[#002B9A] mb-2">
                                 {industry.title}
                             </h3>
-                            <p
-                                className="text-gray-600"
+                            <div
+                                className="text-gray-600 list-disc pl-4"
+                                style={{ lineHeight: "1.8em" }}
                                 dangerouslySetInnerHTML={{ __html: industry.description }}
-                            ></p>
-                            <button className="mt-4 text-[#0048FF] font-medium hover:underline">
+                            ></div>
+                            <button className="h-[8vh] w-[25vh] mt-4 text-[#0048FF] font-medium hover:bg-[#0048FF] hover:text-white hover:shadow-2xl transition duration-300 border-2 border-[#0048FF] rounded-full py-2 px-6">
                                 Learn More →
                             </button>
+
                         </div>
 
                         {/* Right Section: Icon */}
-                        <div className="w-1/3 flex items-left justify-start">
+                        <div className="w-1/3 flex justify-start items-center ">
                             <img
                                 src={industry.icon}
                                 alt={industry.title}
-                                className="w-[30vh] h-[30vh]"
+                                className="w-[40vh] h-[35vh]"
                             />
                         </div>
                     </div>
