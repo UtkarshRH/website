@@ -61,7 +61,7 @@ const industriesData = [
 
 const Industrie = () => {
     return (
-        <div className="bg-[#F8FAFC] w-full min-h-screen">
+        <div className="bg-[#EDEFF2] w-full min-h-screen">
             {/* Header Section */}
             <div className="bg-solution-gradient h-48 flex items-center">
                 <h1 className="text-white text-3xl md:text-5xl font-bold uppercase ml-10">
@@ -78,7 +78,7 @@ const Industrie = () => {
             </div>
 
             {/* Cards Section */}
-            <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mt-12 px-12 md:px-48">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mt-12 mb-12 px-12 md:px-48">
                 {industriesData.map((industry, index) => (
                     <div
                         key={industry.id}

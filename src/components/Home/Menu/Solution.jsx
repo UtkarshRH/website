@@ -39,14 +39,15 @@ const cardsData = [
   },
 ];
 
-const Solution = () => {
+const Solution = () => {  
+  console.log('Solution component rendered');
   return (
     <>
-      <div className="bg-[#F0F0F0] min-h-screen w-full relative">
+      <div className="bg-[#F0F0F0] min-h-screen w-full relative mt-6">
         <div className="bg-solution-gradient sm:h-[100vh] md:h-[130vh] lg:h-[130vh] xl:h-[50vh] 2xl:h-[100vh] 3xl:h-[100vh]">
           {/* Top Section - Heading */}
           <div className="absolute top-0 left-10 text-left py-16">
-            <h1 className="text-white text-4xl md:text-6xl font-bold">
+            <h1 className="text-[2rem] sm:text-[1rem]  md:text-[3rem]  lg:text-[2rem]  xl:text-[2.5rem]  2xl:text-[3rem]  3xl:text-[5rem] font-bold text-[#fff] ">
               SOLUTIONS
             </h1>
           </div>

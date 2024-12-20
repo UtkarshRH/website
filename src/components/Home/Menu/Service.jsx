@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import dvi from "../../../assets/img/dvi.png";
 import Analyse from "../../../assets/img/Analyse.png";
 import oper from "../../../assets/img/oper.png";
 import Integrate from "../../../assets/img/Integrate.png";
+import { ToastContainer, toast } from "react-toastify";  // Import Toastify components
+import "react-toastify/dist/ReactToastify.css";  // Import the CSS for Toastify
 
 const servicesData = [
   {
@@ -36,11 +38,31 @@ const servicesData = [
 ];
 
 const Service = () => {
+  const [isInputVisible, setIsInputVisible] = useState(false);
+  const [buttonText, setButtonText] = useState("Consult Us");
+  const [phoneNumber, setPhoneNumber] = useState("");
+
+  // Handle button click to show input
+  const handleButtonClick = () => {
+    setIsInputVisible(true);
+    setButtonText("Submit");
+  };
+
+  // Handle form submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Show toast notification instead of alert
+    toast.success("Soon our team will get in touch with you!");
+    setIsInputVisible(false);
+    setButtonText("Consult Us");
+    setPhoneNumber("");
+  };
+
   return (
-    <div className="bg-[#F0F0F0] min-h-screen w-full relative">
+    <div className="bg-[#F0F0F0] min-h-screen w-full relative mt-6">
       {/* Top Section - Heading */}
       <div className="bg-solution-gradient sm:h-[100vh] md:h-[130vh] lg:h-[130vh] xl:h-[35vh] 2xl:h-[100vh] 3xl:h-[100vh] flex items-center px-10">
-        <h1 className="text-white text-4xl md:text-5xl font-bold mb-10">
+        <h1 className="text-[2rem] sm:text-[1rem] md:text-[3rem] lg:text-[2rem] xl:text-[2.5rem] 2xl:text-[3rem] 3xl:text-[5rem] font-bold text-[#fff]">
           OUR SERVICES
         </h1>
       </div>
@@ -83,11 +105,43 @@ const Service = () => {
               Let's connect and bring your ideas to life!
             </span>
           </p>
-          <button className="bg-gradient-to-r from-[#0048FF] to-[#D6008D] text-white py-2 px-6 rounded-full hover:opacity-90 transition-opacity duration-300">
-            Consult Us
-          </button>
+
+          {/* Form with input animation */}
+          <form onSubmit={handleSubmit} className="flex flex-col items-end w-full md:w-1/2 space-y-4 overflow-hidden">
+            <div className="relative w-full">
+              {/* Input field */}
+              <input
+                type="tel"
+                placeholder="Enter your number"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                className={`p-3 pl-12 border border-gray-300 rounded-lg shadow-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ${isInputVisible ? "opacity-100" : "opacity-0"}`}
+              />
+              {/* Button for submitting */}
+              <button
+                type="button"
+                onClick={handleButtonClick}
+                className={`absolute right-0 top-0 bottom-0 bg-gradient-to-r from-[#0048FF] to-[#D6008D] text-white py-3 px-6 rounded-r-lg hover:opacity-90 transition-opacity duration-300 ${isInputVisible ? "hidden" : "block"}`}
+              >
+                {buttonText}
+              </button>
+
+              {/* Submit button inside the input field */}
+              {isInputVisible && (
+                <button
+                  type="submit"
+                  className="absolute right-0 top-0 bottom-0 bg-gradient-to-r from-[#0048FF] to-[#D6008D] text-white py-3 px-6 rounded-r-lg hover:opacity-90 transition-opacity duration-300"
+                >
+                  Submit
+                </button>
+              )}
+            </div>
+          </form>
         </div>
       </div>
+
+      {/* ToastContainer for displaying toast notifications */}
+      <ToastContainer />
     </div>
   );
 };

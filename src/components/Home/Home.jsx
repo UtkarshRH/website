@@ -16,15 +16,10 @@ const Home = ({ scrollToPlaybook, scrollToContact }) => {
     const [isAnimationComplete, setAnimationComplete] = useState(false);
     const [isForVisible, setForVisible] = useState(false);
     const [currentText, setCurrentText] = useState("SMART FACTORIES");
-    const [menu, setMenu] = useState(false);
+    
 
     const rotatingTexts = ["SMART FACTORIES", "SMART CITIES", "SMART MACHINES"];
 
-    // event handler for the MENU
-    const handleMenu = () => {
-        setMenu((prevState) => !prevState);
-        console.log("Menu Click")
-    }
 
     useEffect(() => {
         // Delay second line animation by 3.5 seconds
@@ -80,18 +75,20 @@ const Home = ({ scrollToPlaybook, scrollToContact }) => {
                     <Carousal currentText={currentText} /> {/* Pass currentText prop */}
                 </div>
 
-                {/* Menu */}
+                {/* Menu
                 <div onClick={handleMenu} className="absolute top-4 md:top-2 lg:top-2 left-4 md:left-6 lg:left-10 flex items-center z-10 cursor-pointer">
                     <div className="w-8 h-8 md:w-14 md:h-10 lg:w-12 lg:h-10 relative mr-2">
                         <HiOutlineMenuAlt2 className="w-full h-full text-[#eef3f5]" />
                     </div>
                     <span className="text-[#eef3f5] text-[1rem] md:text-[2rem] lg:text-[1.5rem] font-medium font-['Roboto']">MENU</span>
-                </div>
+                </div> */}
+
+
                 {/* Menu Component */}
 
-                {menu && (
-                    <Menu handleMenu={handleMenu} menu={menu}/>
-                )}
+                 <Menu />
+
+                 
 
                 {/* Logo */}
                 <div className="absolute top-4 md:top-2 lg:top-2 right-4 md:right-6 lg:right-10 flex items-center z-10">
