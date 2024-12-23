@@ -6,6 +6,7 @@ export default {
   ],
   theme: {
     screens: {
+      'xs': '320px', // Added custom breakpoint for 320px
       'sm': '640px',
       'md': '768px',
       'lg': '1024px', 
@@ -13,6 +14,7 @@ export default {
       '2xl': '1536px',
       // Custom screen size
       '3xl': '1600px',
+      '4xl': '2560px', // Added custom breakpoint for 2560pxa
     },
     extend: {
       colors: {

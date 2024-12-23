@@ -15,6 +15,7 @@ import Experties from './components/Home/Menu/Experties';
 import Industrie from './components/Home/Menu/Industrie';
 import About from './components/Home/Menu/About';
 import CookieConsentBanner from "./components/Cookie/CookieConsentBanner"
+import Career from './components/Home/Menu/Career';
 
 
 function App() {
@@ -37,9 +38,10 @@ function App() {
     if (componentsVisibility.Experties) components.push(<Experties key="Experties" />);
     if (componentsVisibility.Industrie) components.push(<Industrie key="Industrie" />);
     if (componentsVisibility.About) components.push(<About key="About" />);
+    if (componentsVisibility.Career) components.push(<Career key="Career" />);
 
     return components;
-  };
+  };  
 
   return (
     <HelmetProvider>

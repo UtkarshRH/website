@@ -75,7 +75,7 @@ const Menu = () => {
               <IoMdSend /> CONTACT
             </li>
             <li
-              onClick={() => handleMenuItem("Careers")}
+              onClick={() => handleMenuItem("Career")}
               className="flex items-center gap-2 tracking-[.3rem] hover:text-[#ff6347] cursor-pointer"
             >
               <IoMdSend /> CAREERS

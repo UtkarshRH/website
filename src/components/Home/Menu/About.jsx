@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
     <div className="bg-gray-50 text-gray-800 mt-6">
       {/* Hero Section */}
-      <section className="bg-solution-gradient text-white py-20 text-center">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl font-extrabold mb-6">About Us</h1>
+      <section className="bg-solution-gradient text-white py-20 text-start">
+        <div className="max-w-5xl mx-12">
+          <h1 className="text-5xl font-bold mb-6">About Us</h1>
           <p className="text-lg">
             At Smartleaven Technology, we are shaping a smarter, more
             sustainable future through innovation and leadership. Our commitment
@@ -132,7 +133,7 @@ const About = () => {
       </section>
 
       {/* Careers Section */}
-      <section className="py-20 px-6 bg-solution-gradient text-white text-center">
+      {/* <section className="py-20 px-6 bg-solution-gradient text-white text-center">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-6">Careers at Smartleaven</h2>
           <p className="text-lg mb-8">
@@ -140,14 +141,14 @@ const About = () => {
             opportunities to grow your career with us and help shape the future
             of technology.
           </p>
-          <a
-            href="/careers"
+          <Link
+            to='career'
             className="inline-block bg-white text-indigo-800 font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-gray-200 transition"
           >
             Explore Careers
-          </a>
+          </Link>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Information */}
       <section className="py-16 px-6 bg-gray-100">

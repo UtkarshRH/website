@@ -48,9 +48,9 @@ const expertiseData = [
 
 const Expertise = () => {
   return (
-    <div className="bg-[#F8FAFC] w-full min-h-screen">
+    <div className="bg-[#F8FAFC] w-full min-h-screen mt-6 mb-6">
       {/* Top Section */}
-      <div className="bg-solution-gradient h-48 flex items-center">
+      <div className="bg-solution-gradient h-60 flex items-center">
         <h1 className="text-white text-3xl md:text-5xl font-bold uppercase ml-10">
           Our Expertise
         </h1>
@@ -64,7 +64,9 @@ const Expertise = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-14 mt-12 sm:px-8 md:px-28">
+      {/* Added padding left to right for md screen size */}
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-14 mt-12 md:px-10" style={{padding: "15px"}}>
         {expertiseData.map((item,index) => (
           <div
           key={item.id}
@@ -74,7 +76,8 @@ const Expertise = () => {
           >
             <div className="flex items-center gap-4 mb-4">
               <img src={item.icon} alt={item.title} />
-              <h3 className="text-xl font-bold text-[#002B9A]">
+              {/* text size added for md screen size */}
+              <h3 className="text-xl md:text-lg font-bold text-[#002B9A]">
                 {item.title}
                 <br />
               </h3>
@@ -85,7 +88,8 @@ const Expertise = () => {
           </div>
         ))}
         {/* Bottom Visual Section with Typing Animation */}
-      <div className="flex justify-center mt-10 relative">
+        {/* Added Margin bottom for sm & md screen size */}
+      <div className="flex justify-center mt-10 relative mb-20 sm:mb-18 md:mb-12">
         {/* Background Animation */}
         <div className="absolute inset-0 animate-pulse"></div>
 
