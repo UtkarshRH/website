@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaLinkedin } from "react-icons/fa6";
+import LogoTypo from "/src/assets/img/LogoTypo.png"
+import LogoIcon from "/src/assets/img/LogoIcon180.png"
 
 const Footer = () => {
   return (
@@ -10,7 +12,7 @@ const Footer = () => {
         {/* Logo */}
         <img
           className="w-24 h-24 md:w-36 md:h-36 object-cover"
-          src="src/assets/img/LogoIcon180.png"
+          src={LogoIcon}
           alt="Smartleaven Technology"
         />
 
@@ -41,7 +43,7 @@ const Footer = () => {
         {/* Logo */}
         <img
           className="w-1/2 h-1/2 md:w-1/5 md:h-1/5 object-cover"
-          src="src/assets/img/LogoTypo.png"
+          src={LogoTypo}
           alt="Smartleaven Technology"
         />
 
