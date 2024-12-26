@@ -15,12 +15,8 @@ const Career = () => {
   return (
     <div className="bg-[#eee7e7] min-h-screen text-gray-800 mt-6">
       {/* Hero Section */}
-      <section className="bg-solution-gradient text-white py-20 px-8 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Join Our Team</h1>
-        <p className="text-lg md:text-xl">
-          Be a part of a company that values innovation, collaboration, and
-          personal growth.
-        </p>
+      <section className="bg-solution-gradient text-white py-20 px-6 ">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 uppercase">Join Our Team</h1>
       </section>
 
       {/* How to Apply */}
@@ -100,7 +96,7 @@ const Career = () => {
         </p>
         <a
           href={`mailto:${hrEmail}`}
-          className="bg-[#5966db] text-white py-3 px-6 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300"
+          className="bg-solution-gradient text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300"
         >
           Send Your Resume
         </a>

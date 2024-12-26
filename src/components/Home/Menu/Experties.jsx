@@ -48,10 +48,10 @@ const expertiseData = [
 
 const Expertise = () => {
   return (
-    <div className="bg-[#F8FAFC] w-full min-h-screen mt-6 mb-6">
+    <div className="bg-[#F8FAFC] w-full min-h-screen md:mt-6 mb-6">
       {/* Top Section */}
       <div className="bg-solution-gradient h-60 flex items-center">
-        <h1 className="text-white text-3xl md:text-5xl font-bold uppercase ml-10">
+        <h1 className="text-white text-3xl md:text-5xl font-bold uppercase ml-4">
           Our Expertise
         </h1>
       </div>

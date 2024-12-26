@@ -2,7 +2,7 @@ import React from 'react';
 
 const Playbook = () => {
   return (
-    <div className="bg-footer-gradient sm:h-[100vh] md:h-[130vh] lg:h-[130vh] xl:h-[100vh] 2xl:h-[100vh] 3xl:h-[100vh] p-3 lg:p-10 sm:mt-6 md:mt-6 lg:mt-6 xl:mt-6 3xl:mt-6 ">
+    <div className="bg-footer-gradient sm:h-[100vh] md:h-[130vh] lg:h-[130vh] xl:h-[100vh] 2xl:h-[100vh] 3xl:h-[100vh] p-3 lg:p-10 xs:mb-6 sm:mt-6 md:mt-6 lg:mt-6 xl:mt-6 3xl:mt-6 ">
       <h1 className=" text-[2rem] sm:text-[1rem]  md:text-[3rem]  lg:text-[2rem]  xl:text-[2.5rem]  2xl:text-[3rem]  3xl:text-[5rem] font-bold text-[#00182C]  ">OUR <br /> PLAYBOOK</h1>
       {/* Text Size decreased for Tablet(MD) screen size  */}
       <p className=" text-[1.2rem] sm:text-[1rem]  md:text-[2.0rem]  lg:text-[2rem]  xl:text-[1.5rem]  2xl:text-[1.8rem]  3xl:text-[4rem] text-[#EEF3F5] mb-4">

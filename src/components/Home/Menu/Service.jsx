@@ -60,7 +60,7 @@ const Service = () => {
   return (
     <div className="bg-[#F0F0F0] min-h-screen w-full relative mt-6">
       {/* Top Section - Heading */}
-      <div className="bg-solution-gradient xs:h-[50vh] sm:h-[90vh] md:h-[80vh] lg:h-[100vh] xl:h-[35vh] 2xl:h-[100vh] 3xl:h-[100vh] flex items-center px-10">
+      <div className="bg-solution-gradient xs:h-[30vh] sm:h-[90vh] md:h-[80vh] lg:h-[100vh] xl:h-[35vh] 2xl:h-[100vh] 3xl:h-[100vh] flex items-center px-4">
         <h1 className="text-white text-4xl md:text-5xl font-bold mb-10 xs:text-center">
           OUR SERVICES
         </h1>
@@ -103,7 +103,7 @@ const Service = () => {
             onSubmit={handleSubmit}
             className="flex flex-col items-end w-full md:w-1/2 space-y-4"
           >
-            <div className="relative w-full">
+            <div className="relative w-full mb-4">
               <input
                 type="tel"
                 placeholder="Enter your number"
@@ -116,7 +116,7 @@ const Service = () => {
               <button
                 type="button"
                 onClick={handleButtonClick}
-                className={`absolute right-0 top-0 bottom-0 bg-gradient-to-r from-[#0048FF] to-[#D6008D] text-white py-3 px-6 rounded-r-lg hover:opacity-90 transition-opacity duration-300 ${
+                className={`absolute right-0 top-0 bottom-0 bg-solution-gradient text-white py-3 px-6 rounded-r-lg hover:opacity-90 transition-opacity duration-300 ${
                   isInputVisible ? "hidden" : "block"
                 }`}
               >
@@ -125,7 +125,7 @@ const Service = () => {
               {isInputVisible && (
                 <button
                   type="submit"
-                  className="absolute right-0 top-0 bottom-0 bg-gradient-to-r from-[#0048FF] to-[#D6008D] text-white py-3 px-6 rounded-r-lg hover:opacity-90 transition-opacity duration-300"
+                  className="absolute right-0 top-0 bottom-0 bg-solution-gradient text-white py-3 px-6 rounded-r-lg hover:opacity-90 transition-opacity duration-300"
                 >
                   Submit
                 </button>

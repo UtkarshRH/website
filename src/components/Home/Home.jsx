@@ -69,19 +69,11 @@ const Home = ({ scrollToPlaybook, scrollToContact }) => {
                 <meta name="author" content="Vijay Khupse" />
             </Helmet>
             {/* Increased Height 93vh to 97vh */}
-            <div className="w-full h-[93vh] sm:h-[100vh] md:h-[100vh] lg:h-[100vh] bg-custom-gradient relative">
+            <div className="w-full h-[97vh] sm:h-[100vh] md:h-[100vh] lg:h-[100vh] bg-custom-gradient relative">
                 {/* Carousel as Background */}
                 <div className="w-full md:w-full lg:w-1/2 absolute right-0 top-12 md:top-48 lg:top-0  h-full z-0">
                     <Carousal currentText={currentText} /> {/* Pass currentText prop */}
                 </div>
-
-                {/* Menu
-                <div onClick={handleMenu} className="absolute top-4 md:top-2 lg:top-2 left-4 md:left-6 lg:left-10 flex items-center z-10 cursor-pointer">
-                    <div className="w-8 h-8 md:w-14 md:h-10 lg:w-12 lg:h-10 relative mr-2">
-                        <HiOutlineMenuAlt2 className="w-full h-full text-[#eef3f5]" />
-                    </div>
-                    <span className="text-[#eef3f5] text-[1rem] md:text-[2rem] lg:text-[1.5rem] font-medium font-['Roboto']">MENU</span>
-                </div> */}
 
 
                 {/* Menu Component */}
@@ -91,12 +83,12 @@ const Home = ({ scrollToPlaybook, scrollToContact }) => {
                  
 
                 {/* Logo */}
-                <div className="absolute top-4 md:top-2 lg:top-2 right-4 md:right-6 lg:right-10 flex items-center z-10">
+                <div className="absolute top-2 md:top-2 lg:top-2 right-4 md:right-6 lg:right-10 flex items-center z-10">
                     <div className="w-30 h-5 md:w-30 md:h-10 lg:w-44 lg:h-10 relative">
                         <img
                             src={Logo}
                             alt="SmartLeaven Technology"
-                            className="w-full h-full object-contain"
+                            className="md:w-full md:h-full xs:w-[18vh] xs:h-[6vh] object-contain"
                         />
                     </div>
                 </div>
@@ -144,15 +136,15 @@ const Home = ({ scrollToPlaybook, scrollToContact }) => {
 
                 {/* Buttons (Our Playbook & Talk to Expert) */}
                 {/* Increased left Margin 4% to 16% */}
-                <div className="absolute bottom-[0%] md:bottom-[0%] lg:bottom-[0%] left-[2%] md:left-[2%] lg:left-[5%] flex space-x-[2.5vw] z-10">
+                <div className="absolute bottom-[5%] md:bottom-[0%] lg:bottom-[0%] left-[2%] md:left-[2%] lg:left-[5%] flex space-x-[2.5vw] z-10">
                     {/* Our Playbook Button */}
-                    <button onClick={scrollToPlaybook} className="bg-[#00182C]  text-[#EEF3F5] text-[3vw] md:text-[1.5vw] lg:text-[1.5vw] font-bold py-[0.5vh] px-[1vw] md:py-[1vh] md:px-[3vw] lg:py-[0vh] lg:px-[1vw] rounded-t-lg shadow-lg flex items-center">
+                    <button onClick={scrollToPlaybook} className="bg-[#00182C]  text-[#EEF3F5] text-[3vw] md:text-[1.5vw] lg:text-[1.5vw] font-bold py-[0.5vh] px-[1vw] md:py-[1vh] md:px-[3vw] lg:py-[0vh] lg:px-[1vw] rounded-lg shadow-lg flex items-center">
                         OUR <br /> PLAYBOOK
                         <img src={playbookIcon} alt="Playbook Icon showing our guide to operational excellence" className="w-10 h-10 sm:w-10 md:w-10 lg:w-10 ml-4 mt-0" />
                     </button>
 
                     {/* Talk to Expert Button */}
-                    <button onClick={scrollToContact} className="bg-transparent border-4 border-[#00182C] text-#00182C text-[3vw] md:text-[1.5vw] lg:text-[1.5vw] font-bold py-[0.5vh] px-[2vw] md:py-[1vh] md:px-[3vw] lg:py-[0vh] lg:px-[2vw] rounded-t-lg shadow-lg flex items-center">
+                    <button onClick={scrollToContact} className="bg-transparent border-4 border-[#00182C] text-#00182C text-[3vw] md:text-[1.5vw] lg:text-[1.5vw] font-bold py-[0.5vh] px-[2vw] md:py-[1vh] md:px-[3vw] lg:py-[0vh] lg:px-[2vw] rounded-lg shadow-lg flex items-center">
                         TALK TO <br /> EXPERT
                         <img src={Badge} alt="Badge icon for contacting our experts" className="w-10 h-10 ml-4 mt-0" />
                     </button>

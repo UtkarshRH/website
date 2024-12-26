@@ -1,17 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import Fact from '/src/assets/img/Fact.png';
 import Fact1 from '/src/assets/img/Fact1.png';
-import City from '/src/assets/img/City.png'; 
-import City1 from '/src/assets/img/City1.png';
 import Machine from '/src/assets/img/Machine.png';
 import Machine1 from '/src/assets/img/Machine1.png';
 
 const Carousal = ({ currentText }) => {
     // Create a mapping of the texts to their respective images
     const imageMapping = {
-        "SMART FACTORIES": [Fact, Fact1],
-        "SMART CITIES": [City, City1],
-        "SMART MACHINES": [Machine, Machine1],
+        "SMART FACTORIES": [
+            "https://i.ibb.co/Gx9HnbH/Fact.png",
+            "https://i.ibb.co/ss4jLZM/Fact1.png"
+        ],
+
+        "SMART CITIES": [
+            "https://i.ibb.co/yyhV8Lt/City.png",
+            "https://i.ibb.co/2NM0g9X/City1.png" // City image links
+        ],
+
+        "SMART MACHINES": [
+            "https://i.ibb.co/QHpQ2BR/Machine.png",
+            "https://i.ibb.co/prJ6xmW/Machine1.png"
+        ],
     };
 
     // Get the appropriate images based on the currentText

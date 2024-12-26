@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Element } from 'react-scroll';
 import { useSelector, useDispatch } from 'react-redux';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Home from './components/Home/Home';
@@ -32,13 +33,13 @@ function App() {
 
     // Check if each component is active and render it
     if (componentsVisibility.Playbook) components.push(<Playbook key="Playbook" />);
-    if (componentsVisibility.Contact) components.push(<Contact key="Contact" />);
-    if (componentsVisibility.Solution) components.push(<Solution key="Solution" />);
-    if (componentsVisibility.Service) components.push(<Service key="Service" />);
-    if (componentsVisibility.Experties) components.push(<Experties key="Experties" />);
-    if (componentsVisibility.Industrie) components.push(<Industrie key="Industrie" />);
-    if (componentsVisibility.About) components.push(<About key="About" />);
-    if (componentsVisibility.Career) components.push(<Career key="Career" />);
+    if (componentsVisibility.Contact) components.push(<Element name="Contact" key="Contact"><Contact /></Element>);
+    if (componentsVisibility.Solution) components.push(<Element name="Solution" key="Solution"><Solution /></Element>);
+    if (componentsVisibility.Service) components.push(<Element name="Service" key="Service"><Service /></Element>);
+    if (componentsVisibility.Experties) components.push(<Element name="Experties" key="Experties"><Experties /></Element>);
+    if (componentsVisibility.Industrie) components.push(<Element name="Industrie" key="Industrie"><Industrie /></Element>);
+    if (componentsVisibility.About) components.push(<Element name="About" key="About"><About /></Element>);
+    if (componentsVisibility.Career) components.push(<Element name="Career" key="Career"><Career /></Element>);
 
     return components;
   };  

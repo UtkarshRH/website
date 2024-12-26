@@ -56,8 +56,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#00A3E0] to-[#7DD3E0] md:bg-none md:bg-blue-50 flex items-center justify-center">
-      <div className="container mx-auto p-6 flex flex-col md:flex-row items-center justify-between">
+    <div className="h-full bg-gradient-to-b from-[#00A3E0] to-[#7DD3E0] md:bg-none md:bg-blue-50 flex items-center justify-center">
+      <div className="container xs:mt-10 xs:mb-20 mx-auto p-0 flex flex-col md:flex-row items-center justify-between">
         
         {/* Form Section */}
         <div className="w-full md:w-1/2">
